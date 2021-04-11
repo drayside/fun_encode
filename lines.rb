@@ -2,6 +2,17 @@
 
 # use backtick for space
 msg = ARGV[0]
+
+if msg == nil then
+    puts "input:   a short message to encode in the intersection points of lines"
+    puts "output:  some lines that go through multiple points"
+    puts "human:   combine selections from this output with some simpler lines"
+    puts "         of your choice to encode the message"
+    puts "example: the lines y1 = x + 1 and y2 = 9 encode the message 'hi'"
+    puts "         because they intersect at (8,9)"
+    exit
+end
+
 # append trailing space if necessary
 if (msg.length % 2) == 1 then msg += " " end
 # convert spaces to backticks
