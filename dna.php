@@ -1,5 +1,13 @@
 <?php
-$msg = strip_tags($msg);
+if (isset($msg)) {
+    # msg was set by including script
+    $msg = strtoupper(strip_tags($msg));
+    $BR = "<BR/>";
+} else {
+    # read msg from command line
+    $msg = strtoupper(strip_tags($argv[1]));
+    $BR = "\n";
+}
 
 # initialize encoding table
 $letter2codons = array(); # string -> list<string>
@@ -29,7 +37,7 @@ fclose($myfile);
 
 #var_dump($letter2codons);
 
-echo $msg . "<br/>";
+echo $msg . $BR;
 for ($i=0; $i<strlen($msg); $i++) {
     $letter = $msg[$i];
     $codons = $letter2codons[$letter];
@@ -43,6 +51,6 @@ for ($i=0; $i<strlen($msg); $i++) {
     $choice = rand(0, $count-1);
     echo $codons[$choice] . " ";
 }
-echo "<br/>";
+echo $BR;
 
 ?>
