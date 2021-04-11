@@ -1,24 +1,3 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
- "http://www.w3.org/TR/REC-html40/strict.dtd">
-
-<HTML>
-
-<HEAD>
-<TITLE>String to Line Encoder</TITLE>
-<HEAD>
-<BODY>
-<h1>String to Line Encoder</h1>
-
-<?php $msg = strip_tags($_POST['msg']); ?>
-
-<form action="index.php" method="POST">
-Message: <input type="text" name="msg" value="<?php $msg=strip_tags($msg); echo $msg;?>" />
-<input type="submit" value="Encode" />
-</form>
-
-<p/>
-
-
 <?php
 $msg = strip_tags($msg);
 
@@ -67,6 +46,3 @@ for ($i=0; $i<strlen($msg); $i++) {
 echo "<br/>";
 
 ?>
-
-</BODY>
-</HTML>
