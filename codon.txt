@@ -1,6 +1,9 @@
 # DNA codon table. Stop codon is coded as: Stp, O, Stop
 # forked from https://raw.githubusercontent.com/zhanxw/anno/master/codon.txt
-# fork changes the Stop codons to periods from Os
+# fork changes the Stop codons:
+# TAA is used for the missing letters o, b, x
+# TAG is used for the missing letters j, u, z
+# TGA is used for period
 #Codon	    AminoAcid	Letter	 FullName
 AAA	Lys	K	Lysine
 AAC	Asn	N	Asparagine
