@@ -50,9 +50,9 @@ GTA	Val	V	Valine
 GTC	Val	V	Valine
 GTG	Val	V	Valine
 GTT	Val	V	Valine
-TAA	Stp	.	Stop
+TAA	Stp	obx	Stop
 TAC	Tyr	Y	Tyrosine
-TAG	Stp	.	Stop
+TAG	Stp	juz	Stop
 TAT	Tyr	Y	Tyrosine
 TCA	Ser	S	Serine
 TCC	Ser	S	Serine

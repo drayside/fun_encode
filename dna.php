@@ -30,7 +30,17 @@ while(!feof($myfile)) {
         $letter = $a[2];
         $codon = $a[0];
         # append this codon to the list for this letter
-        $letter2codons[$letter][] = $codon;
+        if (strlen($letter) > 1) {
+            # stop codon that encodes more than one letter
+            $subletters = str_split($letter);
+            foreach ($subletters as $sublet) {
+                $sublet = strtoupper($sublet);
+                $letter2codons[$sublet][] = $codon;
+            }
+        } else {
+            # regular case: just one letter
+            $letter2codons[$letter][] = $codon;
+        }
     }
 }
 fclose($myfile);
